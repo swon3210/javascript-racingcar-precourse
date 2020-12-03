@@ -15,13 +15,9 @@
 ### 입력 처리 및 유효성 검사
 
 <br/>
-- 이용자 입력 받기 (get names input)
-
-- 이용자 입력 유효성 검사하기 (check input names)
-
-- 시도 횟수 입력 받기 (get try count input)
-
-- 시도 횟수 유효성 검사하기 (check try count)
+- 자동차 이름 입력값 전처리하기 (preprocess car names input)
+- 자동차 이름 입력값 유효성 검사하기 (check car names input)
+- 무조건 1 이상의 값이 시도 횟수로 입력되도록 만들기 (force try count input to be more than 1)
 
 <br/>
 
@@ -37,7 +33,6 @@
 
 <br/>
 - 경주 진행과정 보여주기 (show race process)
-
 - 최종 우승자 보여주기 (show winners)
   <br/><br/>
 
