@@ -17,6 +17,7 @@
 <br/>
 - 자동차 이름 입력값 전처리하기 (preprocess car names input)
 - 자동차 이름 입력값 유효성 검사하기 (check car names input)
+- 자동차 이름 입력의 어디가 유효하지 않은지를 알아내기 (figure what are the problems of user's car names input)
 - 무조건 1 이상의 값이 시도 횟수로 입력되도록 만들기 (force try count input to be more than 1)
 
 <br/>
@@ -24,7 +25,7 @@
 ### 경주 수행하기
 
 <br/>
-- 차들과 경주장을 생성하기 (create cars & racecourse)
+- 차들과 경주장을 생성하기 (create cars & raceCourse)
 - 경주 진행하기 (play race game)
 
 <br/>

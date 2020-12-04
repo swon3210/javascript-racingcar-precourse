@@ -1,22 +1,43 @@
 import { NAME_SEPERATOR } from '../constants/configuration.js';
 
-const checkIsCarAlone = (names) => {
-  const carNames = names.split(NAME_SEPERATOR);
-  let isCarAlone = false;
-  if (carNames.length === 0) {
-    isCarAlone = true;
-  }
-
-  return isCarAlone;
+const carNameCheckResult = {
+  isCarNumberNotEnough: false,
+  isCarNameLong: false,
+  isAllCarNameDifferent: false,
 };
 
-export const checkCarNames = (names) => {
-  let isValid = true;
-  if (checkIsCarAlone(names)) {
-    isValid = false;
+const checkIsCarNameLong = (carNameList) => {
+  let isCarNameLong = false;
+  for (let i = 0; i < carNameList.length; i += 1) {
+    if (carNameList[i].length > 5) {
+      isCarNameLong = true;
+      break;
+    }
   }
 
-  return isValid;
+  return isCarNameLong;
+};
+
+const checkIsAllCarNameDifferent = (carNameList) => {
+  const isAllCarNameDifferent =
+    carNameList.length !== new Set(carNameList).size;
+
+  return isAllCarNameDifferent;
+};
+
+export const getCarNamesCheckResult = (names) => {
+  const carNameList = names.split(NAME_SEPERATOR);
+  if (carNameList.length < 2) {
+    carNameCheckResult.isCarNumberNotEnough = true;
+  }
+  if (checkIsCarNameLong(carNameList)) {
+    carNameCheckResult.isCarNameLong = true;
+  }
+  if (checkIsAllCarNameDifferent(carNameList)) {
+    carNameCheckResult.isAllCarNameDifferent = true;
+  }
+
+  return carNameCheckResult;
 };
 export const checkTryCount = (tryCount) => {
   let isValid = true;
