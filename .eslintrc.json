@@ -12,7 +12,11 @@
     },
     "plugins": ["prettier", "jest", "@babel"],
     "rules": {
+<<<<<<< HEAD
         "import/extensions": ["off"],
         "import/prefer-default-export": ["off"]
+=======
+        "import/extensions": ["off"]
+>>>>>>> swon3210
     }
 }

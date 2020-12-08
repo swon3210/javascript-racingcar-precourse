@@ -21,9 +21,26 @@ describe('racingCarGame', () => {
   racingCarGame.addCarToRaceCourse(car2);
   racingCarGame.addCarToRaceCourse(car3);
   racingCarGame.addCarToRaceCourse(car4);
+<<<<<<< HEAD
+=======
+  it('addCarToRaceCourse', () => {
+    expect(racingCarGame.raceCourse).toContain(car1);
+    expect(racingCarGame.raceCourse).toContain(car2);
+    expect(racingCarGame.raceCourse).toContain(car3);
+    expect(racingCarGame.raceCourse).toContain(car4);
+  });
+>>>>>>> swon3210
   it('play', () => {
     const tryCount = 10;
     racingCarGame.play(tryCount);
     expect(racingCarGame.raceCourseProcessRecords.length).toBe(10);
   });
+<<<<<<< HEAD
+=======
+  it('getWinnerCarNameList', () => {
+    const winnerList = racingCarGame.getWinnerCarNameList();
+    const carNameList = [car1.name, car2.name, car3.name, car4.name];
+    expect(carNameList).toEqual(expect.arrayContaining(winnerList));
+  });
+>>>>>>> swon3210
 });
